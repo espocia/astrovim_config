@@ -18,6 +18,11 @@ return {
     --   desc = "Previous buffer",
     -- },
 
+    -- mapping for nvim-rest client
+    ["<leader>rr"] = { "<Plug>RestNvim", desc = "Run the request under the cursor" },
+    ["<leader>rp"] = { "<Plug>RestNvimPreview", desc = "Preview the request cURL command" },
+    ["<leader>rl"] = { "<Plug>RestNvimLast", desc = "Re-run the last request" },
+
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -32,6 +37,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>a"] = { "<cmd>echo 'Hello world!'<cr>", desc = "Say hello world" },
+    ["<leader>dd"] = { "<cmd> lua vim.diagnostic.open_float() <cr>", desc = "toggles local troubleshoot" },
   },
   t = {
     -- setting a mapping to false will disable it
